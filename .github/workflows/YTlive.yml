@@ -261,6 +261,7 @@ jobs:
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
         $(youtube-dl -g https://www.youtube.com/watch?v=DTNkEm6jaqQ)
         EOL
+
     - name: Get 大愛三台.m3u8
       run: |
         touch ./大愛三台.m3u8
@@ -269,7 +270,69 @@ jobs:
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
         $(youtube-dl -g https://www.youtube.com/watch?v=MIqUplvSRWA)
+        EOL
 
+    - name: Get MOMO購物一台.m3u8
+      run: |
+        touch ./MOMO購物一台.m3u8
+        sudo cat >./MOMO購物一台.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+        $(youtube-dl -g https://www.youtube.com/watch?v=_pZQ1Lk0xMA)
+        EOL
+
+    - name: Get MOMO購物二台.m3u8
+      run: |
+        touch ./MOMO購物二台.m3u8
+        sudo cat >./MOMO購物二台.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+        $(youtube-dl -g https://www.youtube.com/watch?v=xbNWkUyxQGM)
+        EOL
+
+
+    - name: Get 美好購物1台.m3u8
+      run: |
+        touch ./美好購物1台.m3u8
+        sudo cat >./美好購物1台.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+        $(youtube-dl -g https://www.youtube.com/watch?v=yuhgIlXwPh8)
+        EOL
+
+    - name: Get 美好購物2台.m3u8
+      run: |
+        touch ./美好購物2台.m3u8
+        sudo cat >./美好購物2台.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+        $(youtube-dl -g https://www.youtube.com/watch?v=LEOat38Iuao)
+        EOL
+
+
+    - name: Get 東森購物46台.m3u8
+      run: |
+        touch ./東森購物46台.m3u8
+        sudo cat >./東森購物46台.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+        $(youtube-dl -g https://www.youtube.com/watch?v=Z50JFuNgvB0)
+        EOL
+
+    - name: Get 東森購物60台.m3u8
+      run: |
+        touch ./東森購物60台.m3u8
+        sudo cat >./東森購物60台.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+        $(youtube-dl -g https://www.youtube.com/watch?v=u0NYyH3ZesE)
+        EOL
 
     - name : Upload artifact
       uses: actions/upload-artifact@master
