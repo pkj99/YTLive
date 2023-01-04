@@ -92,16 +92,6 @@ jobs:
         $(youtube-dl -g https://www.youtube.com/watch?v=_QbRXRnHMVY)
         EOL
 
-    - name: Get CCTV中文国际.m3u8
-      run: |
-        touch ./CCTV中文国际.m3u8
-        sudo cat >./CCTV中文国际.m3u8 <<EOL
-        #EXTM3U
-        #EXT-X-VERSION:3
-        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(youtube-dl -g https://www.youtube.com/watch?v=Qg9U06O2R-s)
-        EOL
-
     - name: Get 寰宇新聞.m3u8
       run: |
         touch ./寰宇新聞.m3u8
@@ -149,7 +139,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(youtube-dl -g https://www.youtube.com/watch?v=D2YhCmA8Mtw)
+        $(youtube-dl -g http://www.youtube.com/channel/UCL0_NxCvkcXwZHpvqgMZY-A/live)
         EOL
 
     - name: Get 鏡新聞.m3u8
@@ -180,16 +170,6 @@ jobs:
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
         $(youtube-dl -g https://www.youtube.com/c/yoyotvebc/live)
-        EOL
-
-    - name: Get TVBS.m3u8
-      run: |
-        touch ./TVBS.m3u8
-        sudo cat >./TVBS.m3u8 <<EOL
-        #EXTM3U
-        #EXT-X-VERSION:3
-        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(youtube-dl -g http://www.youtube.com/channel/UCL0_NxCvkcXwZHpvqgMZY-A/live)
         EOL
 
     - name: Get KPOPLive.m3u8
