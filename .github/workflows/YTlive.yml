@@ -7,10 +7,10 @@ jobs:
   build:
     runs-on: ubuntu-18.04
     steps:
-    - name: Install youtube-dl
+    - name: Install yt-dlp
       run: |
-        sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
-        sudo chmod a+rx /usr/local/bin/youtube-dl
+        sudo curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
+        sudo chmod a+rx /usr/local/bin/yt-dlp
 
     - name: Get 中視新聞.m3u8
       run: |
@@ -19,7 +19,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(youtube-dl -g https://www.youtube.com/watch?v=TCnaIE_SAtM)
+        $(yt-dlp -g https://www.youtube.com/watch?v=TCnaIE_SAtM)
         EOL
 
     - name: Get 台視新聞.m3u8
@@ -29,7 +29,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(youtube-dl -g https://www.youtube.com/watch?v=xL0ch83RAK8)
+        $(yt-dlp -g https://www.youtube.com/watch?v=xL0ch83RAK8)
         EOL
 
     - name: Get 華視新聞.m3u8
@@ -39,7 +39,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(youtube-dl -g https://www.youtube.com/watch?v=wM0g8EoUZ_E)
+        $(yt-dlp -g https://www.youtube.com/watch?v=wM0g8EoUZ_E)
         EOL
 
     - name: Get 公共電視.m3u8
@@ -49,7 +49,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(youtube-dl -g https://www.youtube.com/watch?v=4Uc00FPs27M)
+        $(yt-dlp -g https://www.youtube.com/watch?v=4Uc00FPs27M)
         EOL
 
     - name: Get 民視新聞.m3u8
@@ -59,7 +59,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(youtube-dl -g https://www.youtube.com/watch?v=ylYJSBUgaMA)
+        $(yt-dlp -g https://www.youtube.com/watch?v=ylYJSBUgaMA)
         EOL
 
     - name: Get 東森新聞.m3u8
@@ -69,7 +69,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(youtube-dl -g https://www.youtube.com/watch?v=FW9Iv2icEq8)
+        $(yt-dlp -g https://www.youtube.com/watch?v=FW9Iv2icEq8)
         EOL
 
     - name: Get 東森財經新聞.m3u8
@@ -79,7 +79,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(youtube-dl -g https://www.youtube.com/watch?v=WHEPzbFA3hw)
+        $(yt-dlp -g https://www.youtube.com/watch?v=WHEPzbFA3hw)
         EOL
 
     - name: Get 中天新聞.m3u8
@@ -89,7 +89,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(youtube-dl -g https://www.youtube.com/watch?v=_QbRXRnHMVY)
+        $(yt-dlp -g https://www.youtube.com/watch?v=_QbRXRnHMVY)
         EOL
 
     - name: Get 寰宇新聞.m3u8
@@ -99,7 +99,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(youtube-dl -g https://www.youtube.com/watch?v=B7Zp3d6xXWw)
+        $(yt-dlp -g https://www.youtube.com/watch?v=B7Zp3d6xXWw)
         EOL
 
     - name: Get 三立海外直播.m3u8
@@ -109,7 +109,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(youtube-dl -g https://www.youtube.com/watch?v=EB4g7wecgTI)
+        $(yt-dlp -g https://www.youtube.com/watch?v=EB4g7wecgTI)
         EOL
 
     - name: Get 三立iNEWS.m3u8
@@ -119,7 +119,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(youtube-dl -g https://www.youtube.com/watch?v=CKjSm5ZeehE)
+        $(yt-dlp -g https://www.youtube.com/watch?v=CKjSm5ZeehE)
         EOL
 
     - name: Get TVBS新聞.m3u8
@@ -129,7 +129,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(youtube-dl -g http://www.youtube.com/channel/UCL0_NxCvkcXwZHpvqgMZY-A/live)
+        $(yt-dlp -g http://www.youtube.com/channel/UCL0_NxCvkcXwZHpvqgMZY-A/live)
         EOL
 
     - name: Get 鏡新聞.m3u8
@@ -139,7 +139,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(youtube-dl -g https://www.youtube.com/watch?v=5n0y6b0Q25o)
+        $(yt-dlp -g https://www.youtube.com/watch?v=5n0y6b0Q25o)
         EOL        
 
     - name: Get 幸福空間居家台.m3u8
@@ -149,7 +149,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(youtube-dl -g https://www.youtube.com/channel/UCoo-jAsJgM8z09ddlhcBlSA/live)
+        $(yt-dlp -g https://www.youtube.com/channel/UCoo-jAsJgM8z09ddlhcBlSA/live)
         EOL
 
     - name: Get 東森幼幼台.m3u8
@@ -159,7 +159,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(youtube-dl -g https://www.youtube.com/c/yoyotvebc/live)
+        $(yt-dlp -g https://www.youtube.com/c/yoyotvebc/live)
         EOL
 
     - name: Get KPOPLive.m3u8
@@ -169,7 +169,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(youtube-dl -g https://www.youtube.com/channel/UCPde4guD9yFBRzkxk2PatoA/live)
+        $(yt-dlp -g https://www.youtube.com/channel/UCPde4guD9yFBRzkxk2PatoA/live)
         EOL
 
     - name: Get KKBOX21.m3u8
@@ -179,7 +179,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(youtube-dl -g http://www.youtube.com/channel/UCh3S2zaqmyQX2dMwpi63zSA/live)
+        $(yt-dlp -g http://www.youtube.com/channel/UCh3S2zaqmyQX2dMwpi63zSA/live)
         EOL
 
     - name: Get KPOP.m3u8
@@ -189,7 +189,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(youtube-dl -g https://www.youtube.com/channel/UCoRXPcv8XK5fAplLbk9PTww/live)
+        $(yt-dlp -g https://www.youtube.com/channel/UCoRXPcv8XK5fAplLbk9PTww/live)
         EOL
 
     - name: Get Music24.m3u8
@@ -199,7 +199,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(youtube-dl -g https://www.youtube.com/watch?v=wrYF0HX7Kzc)
+        $(yt-dlp -g https://www.youtube.com/watch?v=wrYF0HX7Kzc)
         EOL
 
     - name: Get 經典元宇宙24小時不間斷直播.m3u8
@@ -209,7 +209,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(youtube-dl -g https://www.youtube.com/watch?v=ZxluW--lZpk)
+        $(yt-dlp -g https://www.youtube.com/watch?v=ZxluW--lZpk)
         EOL
 
 
@@ -220,7 +220,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(youtube-dl -g https://www.youtube.com/watch?v=oV_i3Hsl_zg)
+        $(yt-dlp -g https://www.youtube.com/watch?v=oV_i3Hsl_zg)
         EOL
     - name: Get 大愛二台.m3u8
       run: |
@@ -229,7 +229,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(youtube-dl -g https://www.youtube.com/watch?v=DTNkEm6jaqQ)
+        $(yt-dlp -g https://www.youtube.com/watch?v=DTNkEm6jaqQ)
         EOL
 
     - name: Get 大愛三台.m3u8
@@ -239,7 +239,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(youtube-dl -g https://www.youtube.com/watch?v=MIqUplvSRWA)
+        $(yt-dlp -g https://www.youtube.com/watch?v=MIqUplvSRWA)
         EOL
 
     - name: Get MOMO購物一台.m3u8
@@ -249,7 +249,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(youtube-dl -g https://www.youtube.com/watch?v=_pZQ1Lk0xMA)
+        $(yt-dlp -g https://www.youtube.com/watch?v=_pZQ1Lk0xMA)
         EOL
 
     - name: Get MOMO購物二台.m3u8
@@ -259,7 +259,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(youtube-dl -g https://www.youtube.com/watch?v=xbNWkUyxQGM)
+        $(yt-dlp -g https://www.youtube.com/watch?v=xbNWkUyxQGM)
         EOL
 
 
@@ -270,7 +270,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(youtube-dl -g https://www.youtube.com/watch?v=yuhgIlXwPh8)
+        $(yt-dlp -g https://www.youtube.com/watch?v=yuhgIlXwPh8)
         EOL
 
     - name: Get 美好購物2台.m3u8
@@ -280,7 +280,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(youtube-dl -g https://www.youtube.com/watch?v=LEOat38Iuao)
+        $(yt-dlp -g https://www.youtube.com/watch?v=LEOat38Iuao)
         EOL
 
 
@@ -291,7 +291,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(youtube-dl -g https://www.youtube.com/watch?v=Z50JFuNgvB0)
+        $(yt-dlp -g https://www.youtube.com/watch?v=Z50JFuNgvB0)
         EOL
 
     - name: Get 東森購物60台.m3u8
@@ -301,7 +301,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(youtube-dl -g https://www.youtube.com/watch?v=u0NYyH3ZesE)
+        $(yt-dlp -g https://www.youtube.com/watch?v=u0NYyH3ZesE)
         EOL
 
     - name : Upload artifact
